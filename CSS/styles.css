@@ -1,0 +1,75 @@
+body {
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+}
+h2 {
+    font-weight: lighter;
+}
+
+nav {
+    margin-left: 300px;
+}
+
+nav ul {
+    padding:0mm;
+}
+nav li {
+    display: inline-block;
+}
+
+header{
+    background-color: #E3E3E3;
+    display: flex;
+    align-items: center;
+}
+
+
+ /* Links*/
+
+a{
+    text-decoration: none;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+header a {
+    color: #1C1D21;
+    padding: 10px;
+    font-size: 1.2em;
+
+}
+.cta-button{
+    background-color: #F7F8F3;
+    color: #1C1D21;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    padding: 10px 35px;
+    border-radius: 8px;
+}
+}
+.logo{
+    cursor: pointer;
+}
+
+/* Front page */
+.frontpage{
+    background-image: url("../images/Frontimage.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    background-position-x: right;
+    background-position-y: top center;
+    position: relative;
+}
+
+.welcome__content{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    text-align: center;
+}
