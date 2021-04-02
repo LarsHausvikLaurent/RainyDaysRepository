@@ -1,0 +1,460 @@
+/*
+Tasks:
+
+*/
+
+@font-face {
+    font-family: "Boots And Spurs";
+    src: url(../fonts/BootsAndSpurs.ttf) format("truetype");
+}
+
+body {
+    font-family: 'Roboto';
+    min-height: 100vh;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+h1,
+.logo,
+h2 {
+    font-family: "Boots And Spurs", Tahoma;
+}
+
+h2 {
+    text-align: center;
+}
+
+.product-list h2 {
+    font-family: 'Roboto';
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav {
+    margin-left: 20px;
+    display: none;
+    position: fixed;
+    top: 45px;
+    background: #202020;
+    z-index: 1000;
+    right: 0px;
+}
+
+header, footer {
+    background-color: #202020;
+    color: #fff;
+}
+
+nav ul {
+    padding: 0px;
+}
+
+nav li {
+    display: block;
+    padding: 20px 30px; 
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+#hamburger-menu:checked ~nav {
+    display: block;
+}
+
+/*---------------------- Links ---------------------- */
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.cta{
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.cta:before {
+    content: "";
+    padding: 10px;
+    background: #FFF;
+    transform: rotate(45deg);
+    position: absolute;
+    height: 100px;
+    top: -40px;
+    left: -100px;
+    transition: ease-in-out 1s;
+    opacity: 0.3;
+}
+
+.cta:hover:before {
+    left: 120%;
+}
+
+.cta-sale {
+    background-color: #127300;
+}
+
+.cta-small {
+    padding: 8px 20px;
+    font-size: 0.8em;
+    grid-row: 2/4;
+    grid-column: 2;
+    min-width: 51,2px;
+    text-align: center;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.reviews {
+    background-color: #e8e8e8;
+}
+
+.products {
+    background-color:#fbfbfb;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.products img {
+    grid-column: -1/1;
+}
+
+.products h2
+.products h3, 
+.products p {
+    grid-column: 1;
+    font-size: 0.9em;
+    margin: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* ------------------ Home Page --------------------*/
+
+.welcome {
+    background-image: url(../images/home-header.jpg);
+    min-height: 70vh;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+    position: relative;
+}
+
+.welcome__content {
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+}
+
+.selling-points {
+    margin: 50px auto;
+}
+
+.selling-points, 
+.review__content {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+.selling-points > *, 
+.review__content > * {
+    flex: 1;
+}
+
+.selling-points__images{
+    border-radius: 50px;
+    max-width: 100%;
+}
+
+.reviews {
+    text-align: center;
+    padding: 50px auto;
+}
+
+.review__content {
+    text-align: left;
+    margin: auto;
+}
+
+.review__content div {
+    margin: 20px
+}
+
+.reviews_image {
+    border-radius: 50%;
+    width: 80px;
+    float: right;
+}
+
+.reviews__name {
+    display: block;
+}
+
+.featured {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+    margin: 50px auto;
+    grid-gap: 10px;
+}
+
+.featured h2 {
+    grid-column: -1/1;
+}
+
+.featured img {
+    width: 100%;
+}
+
+/* ---------------- Contact page -------------------*/
+
+input,
+select,
+textarea {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+    height: 65%;
+}
+
+.contact {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.form-wrapper {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+
+.form-wrapper > * {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------------ Guitar Specific Page ---------------*/
+
+.product-specific {
+    display: flex;
+    max-width: 1000px;
+    margin: 0px auto;
+    flex-direction: column;
+}
+
+.product-specific > * {
+    flex: 1;
+}
+
+.product-specific__details {
+    margin: 0px 30px;
+}
+
+.product-specific__price {
+    font-size: 1.5em;
+}
+
+.product-image {
+    width:100%
+}
+
+.product-image__thumbnails {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+/*------------- Guitars Page ---------------*/
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    margin: 50px auto;
+    grid-gap: 10px;
+}
+
+.guitars {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.products img {
+    width: 100%;
+}
+
+/*----------- MEDIA -------------*/
+
+@media (min-width: 600px){
+    .featured {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .selling-points, 
+    .review__content {
+        flex-direction: row;
+    }
+
+    header {
+        justify-content: start;
+    }
+
+    nav {
+        display: block;
+        position: static;
+    }
+
+    nav li {
+        display: inline-block;
+    }
+
+    header label {
+        display: none;
+    }
+
+    h2 {
+        text-align; ;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .form-wrapper {
+        flex-direction: row;
+    }
+
+}
+
+@media (min-width: 800px){
+    .featured {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .review__content div {
+        margin: 50px;
+    }
+
+    .welcome {
+        background-position-x: rigth;
+    }
+
+    .welcome__content {
+        top: 100px;
+        left: 100px;
+        transform: none;
+    }
+
+    .cta-large {
+        padding: 10px 80px;
+    }
+
+    .product-specific {
+        display: flex;
+        max-width: 1000px;
+        margin: 50px auto;
+        flex-direction: row;
+    }
+
+}
+
+
+/*------------------------------ Drafts ------------------------------*/
+
+.jacket-specific {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.jacket-image {
+    flex: 1;
+    justify-content: flex-end;
+}
+.product-specific__details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.rating {
+    flex: 1;
+}
+
+.image-rating {
+    max-width: 40%;
+    float:right;
+    margin-top: -40px;
+}
+
+.name {
+    flex: 1;
+    text-transform: uppercase;
+
+}
+
+.jacket-specific__price {
+    flex: 1;
+    font-weight: bold;
+}
+
+.choose-colours {
+    flex: 1;
+}
+
+.size {
+    flex: 1;
+    color: #707070;
+}
+
+#size {
+    border: 1px solid  #707070;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+    color: #707070;
+}
+
+.add-to-cart {
+    flex: 2;
+}
+
+.cta-cart {
+    background-color: #3F88C5;
+    padding: 20px 70px;
+    color: white;
+    text-transform: uppercase;
+
+}

@@ -8,35 +8,62 @@
     <link href="css/styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/97eed6eac3.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
-      <div>
-        <img class="logo" src="images/Logo Rainy Days.png" alt="logo">
-        <a href="index.html">Rainy Days</a>
+      <input type="checkbox" id="hamburger-menu"/></input>
+      <div class="hamburger">
+      <label for="hamburger-menu"><i class="fas fa-bars cta-effect"></i></label>
+      </div>
+      <div class="logo">
+        <img src="images/Logo Rainy Days.png" alt="logo">
+      </div>
+      <div class="rainydays">
+        <img src="images/Tagline.png">
       </div>
       <nav>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="men.html">Men</a></li>
+          <li><a href="jackets.html">Men</a></li>
           <li><a href="women.html">Women</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <div class="search">
+      <img src="images/icon_search.png">
+      </div>
+      <div class="shoppingcart">
+      <img src="images/icon_shopping_cart.png">
+      </div>
     </header>
     <main>
       <section class="frontpage">
         <div class="welcome__content">
-          <h1>Pushing the comfort zone</h1>
-          <h2>Explore</h2>
-          <a href="men.html" class="cta-button">Men</a>
-          <a href="women.html" class="cta-button">Women</a>
+          <div>
+            <h1>Pushing the comfort zone</h1>
+            <span class="line-span"></span>
+          </div>
+          <div>
+            <h2>Explore</h2>
+          </div>
+          <div class="action">
+            <div class="action_1">
+              <a href="jackets.html" class="cta-button">Men</a>
+            </div>
+            <div class="action_2">
+              <a href="women.html" class="cta-button">Women</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer>
-      <p>Help</p>
+      <p>copyright</p>
+      <div class="help_button cta-effect">
+        <img src="images/Help_button.png"></a>
+      </div>
     </footer>
   </body>
 </html>

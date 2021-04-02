@@ -1,0 +1,61 @@
+nav,header,main,aside,footer,section {
+    background: #FFF2EA;
+    border: 2px solid #FE6700;
+  }
+  
+
+  
+  
+  .home-section {
+    background: #FFF;
+    min-height: 100px;
+  }
+
+  header {grid-area: header;}
+  main {grid-area: main;}
+  .home-section {grid-area: contact-info;}
+  .email {grid-area: email;}
+  .updated {grid-area: updated;}
+  .name-info {grid-area: name-info;}
+  .surname-info {grid-area: surname;}
+  .street-name {grid-area: street-name;}
+  .postal-code {grid-area: postal-code;}
+  .city {grid-area: city;}
+  .country {grid-area: country;}
+  .phone {grid-area: phone;}
+  .save-info {grid-area: save-info;}
+  .total-amount {grid-area: total-amount;}
+  .payment-cta {grid-area: payment-cta;}
+  .credit-card {grid-area: credit-card;}
+  aside {grid-area: aside;}
+  footer {grid-area: footer;}
+
+  body {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: 
+      'header header header'
+      'main main aside'
+      'footer footer footer'
+      ;
+  }
+
+  main {
+      display: grid;
+      grid-gap: 10px;
+      padding: 10px;
+      grid-template-areas: 
+      'contact-info contact-info'
+      'email email'
+      'updated updated'
+      'name surname'
+      'street-name street-name'
+      'postal-code city'
+      'country country'
+      'phone phone'
+      'save-info save-info'
+      'total-amount total-amount'
+      'payment-cta payment-cta'
+      ;
+  }
+  

@@ -1,5 +1,9 @@
+/* ---------------- General ----------------- */
+
 body {
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    background-color: #F7F8F3;
 }
 
 h1 {
@@ -9,25 +13,94 @@ h2 {
     font-weight: lighter;
 }
 
-nav {
-    margin-left: 300px;
+h3 {
+    font-size: 1em;
 }
 
-nav ul {
-    padding:0mm;
-}
-nav li {
-    display: inline-block;
-}
+/*---------------------- Header and Nav ---------------------- */
 
-header{
+header, footer{
     background-color: #E3E3E3;
     display: flex;
     align-items: center;
 }
 
+nav {
+    flex: 5;
+    display: none;
+    position: fixed;
+    top: 64px;
+    z-index: 1000;
+    background: #E3E3E3;
+    opacity: 85%;
 
- /* Links*/
+}
+
+nav ul {
+    padding:0mm;
+    text-align:left;
+}
+nav li {
+    display: block;
+}
+
+.rainydays {
+    flex: 1;
+}
+
+.rainydays img {
+    max-width: 100px;
+}
+
+.logo{
+    cursor: pointer;
+    flex: 1;
+    max-width: 100px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.search {
+    flex: 1;
+    max-width: 40px;
+    min-width: 30px;
+    margin-left: 10px;
+}
+
+.search img {
+    max-width: 60%;
+}
+
+.shoppingcart {
+    flex: 1;
+    max-width: 40px;
+    min-width: 30px;
+}
+
+.shoppingcart img {
+    max-width: 60%;
+}
+
+.shoppingcart a {
+    display: hidden;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+#hamburger-menu:checked ~nav {
+    display: block;
+}
+
+.hamburger {
+    flex: 1;
+    margin: 0px 5px 0px 20px;
+}
+
+ /* ---------------------- Links -------------------*/
 
 a{
     text-decoration: none;
@@ -38,7 +111,7 @@ a{
 }
 
 header a {
-    color: #1C1D21;
+    color: #2b2b2b;
     padding: 10px;
     font-size: 1.2em;
 
@@ -48,15 +121,28 @@ header a {
     color: #1C1D21;
     font-size: 1.2em;
     text-transform: uppercase;
-    padding: 10px 35px;
+    padding: 10px 30px;
     border-radius: 8px;
 }
+
+.cta {
+    color: #FFFF;
+    background-color:#E83024;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 0.9em;
+    float: right;
+    margin: -40px auto auto auto;
 }
-.logo{
+
+.cta-effect {
     cursor: pointer;
 }
 
-/* Front page */
+
+/*---------------------- Front Page ---------------------- */
+
 .frontpage{
     background-image: url("../images/Frontimage.jpeg");
     background-size: cover;
@@ -65,11 +151,535 @@ header a {
     background-position-x: right;
     background-position-y: top center;
     position: relative;
+    text-align: center;
 }
 
 .welcome__content{
     position: absolute;
-    top: 50%;
-    left: 30%;
+    color: white;
+    top: 55%;
+    left: 50%;
     text-align: center;
+    transform: translate(-50%, -50%);
 }
+
+.welcome__content h1 {
+    min-width: 310px;
+}
+
+.line-span {
+    border-bottom: 2px solid white;
+    display: block;
+}
+
+.action {
+    display: flex;
+}
+
+.action_1 {
+    flex: 1;
+}
+
+.action_2 {
+    flex: 1;
+}
+
+
+/*---------------------- Jackets Page ---------------------- */
+
+
+.jacket-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 1000px;
+    margin: 50px auto;
+    grid-gap: 10px;
+}
+
+.jackets img {
+    width: 100%;
+}
+
+.colours {
+    width: 50%;
+}
+
+.jackets {
+    margin-top: 35px;
+    max-width: 300px;
+    margin: auto;
+}
+
+.jackets h2 {
+    text-transform: uppercase;
+}
+
+/*---------------------- Jackets Specifics Page ---------------------- */
+
+.jacket-specific {
+    display: flex;
+    max-width: 300px;
+    height: 822px;
+    margin: 50px auto;
+    flex-direction: column;
+}
+
+.jacket-image {
+    flex: 1;
+}
+
+.jacket-image img {
+    width: 100%;
+}
+
+.specific-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.rating {
+    flex: 1;
+    margin-bottom: -30px;
+}
+
+.image-rating {
+    max-width: 40%;
+    float:right;
+    margin-top: -40px;
+}
+
+.name {
+    flex: 1;
+    text-transform: uppercase;
+    margin-bottom: -30px;
+
+}
+
+.jacket-specific__price {
+    flex: 1;
+    font-weight: bold;
+}
+
+.choose-colours {
+    flex: 1;
+}
+
+.size {
+    flex: 1;
+    color: #707070;
+}
+
+#size {
+    border: 1px solid  #707070;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+    color: #707070;
+}
+
+.add-to-cart {
+    flex: 1;
+}
+
+#cta-cart {
+    background-color: #3F88C5;
+    padding: 20px 70px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+
+
+/*------------------------ Checkout Page ------------------------*/
+   
+  header {grid-area: header;}
+  .main {grid-area: main;}
+  .email {grid-area: email;}
+  .updated {grid-area: updated;}
+  .name-info {grid-area: name-info;}
+  .surname-info {grid-area: surname;}
+  .street-name {grid-area: street-name;}
+  .postal-code {grid-area: postal-code;}
+  .city {grid-area: city;}
+  .country {grid-area: country;}
+  .phone {grid-area: phone;}
+  .save-info {grid-area: save-info;}
+  .total-amount {grid-area: total-amount;}
+  .payment-cta {grid-area: payment-cta;}
+  .image-small-checkout {grid-area: image-small;}
+  .name-jacket-checkout {grid-area: name-jacket;}
+  .discount-checkout {grid-area: discount;}
+  .apply-discount-checkout {grid-area: apply;}
+  .subtotal-checkout {grid-area: subtotal;}
+  .subtotal-price-checkout {grid-area: subtotal-price;}
+  .line-checkout {grid-area: line-checkout;}
+  .total-amount-checkout {grid-area: total;}
+  .total-amount-price-checkout {grid-area: total-price;}
+  .aside {grid-area: aside;}
+  footer {grid-area: footer;}
+
+  .body-checkout {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: 
+      'header header'
+      'aside aside'
+      'main main'
+      'footer footer';
+      align-content: center;
+  }
+
+  .aside {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: 
+      'image-small name-jacket name-jacket name-jacket'
+      'discount discount discount apply'
+      'subtotal . . subtotal-price'
+      'line-checkout line-checkout line-checkout line-checkout'
+      'total . . total-price'
+      ' . . . . '
+      ' . . . . '
+      ' . . . . '
+      ' . . . . '
+      ;
+  }
+
+
+  .form-wrapper {
+      display: grid;
+      grid-gap: 15px;
+      padding: 10px;
+      justify-content: space-evenly;
+      grid-template-areas: 
+      'email email'
+      'updated updated'
+      'name-info surname'
+      'street-name street-name'
+      'postal-code city'
+      'country country'
+      'phone phone'
+      'save-info save-info'
+      'total-amount total-amount'
+      'payment-cta payment-cta'
+      ;
+
+    }
+
+    .form-wrapper section {
+        min-height: 30px;
+      }
+    
+      .form-wrapper input, 
+      #discount, 
+      #apply {
+        border: 1px solid #c4c4c4;
+        min-width: 100%;
+        border-radius: 5px;
+        padding: 5px 0px;
+      }
+    
+      #email-updates, #save-info {
+          min-width: 0%;
+      }
+
+    .image-small-checkout img {
+        width: 100%;
+    }
+  
+    .name-jacket-checkout {
+        text-transform: uppercase;
+        margin-top: -10px;
+    }
+  
+   .apply-discount-checkout {
+        align-self: end;
+    }
+  
+    .line {
+        border: 1px black solid;
+    }
+
+    .main, .aside {
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .phone, .country, .street-name, .email {
+        justify-self: left;
+    }
+
+    .total-amount {
+        justify-self: center;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .total-amount span {
+        font-weight: bold;
+    }
+
+    .payment-cta {
+        justify-self: center;
+    }
+
+
+
+/*------------------------- Footer ------------------------------*/
+
+
+.help_button img {
+    max-width: 90px;
+    flex: 1;
+}
+
+footer p {
+    flex: 1;
+    
+}
+
+/*---------------------- MEDIA ---------------------- */
+
+@media (min-width: 400px) {
+
+    .jacket-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 600px) {
+
+    .jackets {
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .jackets p {
+        max-width: fit-content;
+    }
+
+    .jackets {
+        width: ;
+    }
+
+    .jacket-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .jacket-specific {
+        display: flex;
+        max-width: 600px;
+        margin: 50px auto;
+        height: auto;
+        gap: 20px; 
+        flex-direction: row;
+    }
+    
+    .jacket-image {
+        flex: 1;
+    }
+    
+    .jacket-image img {
+        width: 100%;
+    }
+    
+    .specific-details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rating {
+        flex: 1;
+        margin-bottom: -30px;
+    }
+    
+    .image-rating {
+        max-width: 40%;
+        float:right;
+        margin-top: -40px;
+    }
+    
+    .name {
+        flex: 1;
+        text-transform: uppercase;
+        margin-bottom: -30px;
+    
+    }
+    
+    .jacket-specific__price {
+        flex: 1;
+        font-weight: bold;
+    }
+    
+    .choose-colours {
+        flex: 1;
+    }
+    
+    .size {
+        flex: 1;
+        color: #707070;
+        margin-bottom: 15px;
+    }
+    
+    .add-to-cart {
+        flex: 1;
+    }
+
+}
+
+
+@media (min-width: 750px) {
+
+    header {
+        justify-content: start;
+    }
+
+    nav {
+        display: block;
+        position: static;
+    }
+
+    nav li {
+        display: inline-block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .body-checkout {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: 
+        'header header'
+        'main aside'
+        'footer footer';
+    }
+
+    .main {
+        max-width: 1000px;
+    }
+
+    .apply-discount-checkout {
+        align-self: normal;
+        margin-top: 22px;
+    }
+
+    .subtotal-checkout,
+    .subtotal-price-checkout {
+        align-self: end;
+    }
+    
+    .total-amount-checkout, 
+    .total-amount-price-checkout {
+        align-self: top;
+    }
+
+
+
+@media (min-width: 800px) {
+
+    .jackets {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .jackets p {
+        max-width: 500px;
+    }
+
+    .jacket-list {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+
+        .jacket-specific {
+            display: flex;
+            max-width: 900px;
+            margin: 50px auto;
+            gap: 20px; 
+            flex-direction: row;
+        }
+        
+        .jacket-image {
+            flex: 1;
+        }
+        
+        .jacket-image img {
+            width: 100%;
+        }
+        
+        .specific-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .rating {
+            flex: 1;
+            margin-bottom: -80px;
+        }
+        
+        .image-rating {
+            max-width: 40%;
+            float:right;
+            margin-top: -40px;
+        }
+        
+        .name {
+            flex: 1;
+            text-transform: uppercase;
+            margin-bottom: -80px;
+        
+        }
+        
+        .jacket-specific__price {
+            flex: 1;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: -50px;
+        }
+        
+        .choose-colours {
+            flex: 1;
+            margin-bottom: -50px;
+        }
+        
+        .size {
+            flex: 1;
+            color: #707070;
+            margin-bottom: 100px;
+        }
+        
+        .add-to-cart {
+            flex: 1;
+            margin-bottom: -60px;
+        }
+
+        #cta-cart {
+            background-color: #3F88C5;
+            padding: 35px 100px;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+        
+}
+
+@media (min-width: 1000px) {
+    
+    .body-checkout {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+    'header header header header'
+    'main main main aside'
+    'footer footer footer footer';
+}
+
+
