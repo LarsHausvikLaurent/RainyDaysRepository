@@ -148,7 +148,7 @@ header a {
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 80vh;
-    background-position-x: right;
+    background-position-x: center;
     background-position-y: top center;
     position: relative;
     text-align: center;
