@@ -353,13 +353,13 @@ header a {
 .text-video {
     color: white;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 0.8em;
 }
 
 
 .explore-content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 30px 30px ;
 }
 
@@ -696,6 +696,40 @@ textarea {
 }
 
 
+.contact-scheme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 10px 20px 10px 0px;
+    padding: 10px;
+}
+
+button {
+    cursor: pointer;
+    background: red;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    cursor: pointer;
+    border-radius: .2rem;
+}
+
+.form-error {
+    display: none;
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 2px;
+}
+
+
 /*----------------------------- About Us -----------------------*/
 
 .about{
@@ -834,6 +868,18 @@ footer p {
     .contact-wrapper {
         flex-direction: row;
         gap: 60px;
+    }
+
+    .text-video {
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.5em;
+    }
+
+    .explore-content {
+        display: flex;
+        flex-direction: row;
+        margin: 30px 30px ;
     }
 
 
