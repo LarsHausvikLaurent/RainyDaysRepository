@@ -110,7 +110,7 @@ function displayCart() {
             productContainer.innerHTML += `
             <div class="product">
                 <button class="remove">Remove</button>
-                <img src="./images/${item.tag}.jpg">
+                <img src="./images/${item.tag}.jpg" alt="jacket">
                 <span>${item.name}</span>
             </div>
             <div class="price">$${item.price}</div>
