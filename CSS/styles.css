@@ -877,10 +877,10 @@ footer p {
     }
 
     .explore-content {
-        display: flex;
-        flex-direction: row;
-        margin: 30px 30px ;
-    }
+    display: flex;
+    flex-direction: row;
+    margin: 30px 30px ;
+}
 
 
 }

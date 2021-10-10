@@ -28,7 +28,7 @@ for (let i = 0; i < carts.length; i++) {
     })
 }
 
-function onLoadCartNumbers() {
+function productInCart() {
     let productNumbers = localStorage.getItem('cartNumbers');
 
     if (productNumbers) {
@@ -138,7 +138,7 @@ function displayCart() {
 }
 
 
-onLoadCartNumbers();
+productInCart();
 displayCart();
 
 
