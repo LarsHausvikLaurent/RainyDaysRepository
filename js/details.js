@@ -13,7 +13,7 @@ console.log(id);
 
 
 
-const url = "http://bromelainofficial.com/wp-json/wc/store/products/" + id;
+const url = "https://bromelainofficial.com/wp-json/wc/store/products/" + id;
 
 console.log(url);
 
