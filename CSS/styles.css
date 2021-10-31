@@ -427,7 +427,22 @@ header a {
     max-width: 1000px;
     margin: 50px auto;
     grid-gap: 10px;
+
 }
+
+.products-jacket  {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content:space-evenly;
+    width: 100%;
+    text-align: center;   
+}
+
+.name-jacket {
+
+}
+
+
 
 .jackets img {
     width: 100%;
