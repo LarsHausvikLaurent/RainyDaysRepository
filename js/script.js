@@ -2,7 +2,7 @@
 
 /* ---------------- REST API ----------------- */
 
-const baseUrl = "https://bromelainofficial.com/wp-json/wc/store/products?per_page=5";
+const baseUrl = "https://bromelainofficial.com/wp-json/wc/store/products";
 const jacketContainer = document.querySelector(".jacket-list")
 
 
